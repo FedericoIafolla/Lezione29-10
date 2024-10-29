@@ -16,7 +16,6 @@ public class BlogPost {
     private String contenuto;
     private int tempoDiLettura;
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }

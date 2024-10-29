@@ -51,9 +51,8 @@ public class BlogPostController {
         return blogPostRepository.findById(id)
                 .map(existingPost -> {
                     blogPostRepository.delete(existingPost);
-                    return ResponseEntity.noContent().<Void>build(); // Modifica qui
+                    return ResponseEntity.noContent().<Void>build();
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
-
 }

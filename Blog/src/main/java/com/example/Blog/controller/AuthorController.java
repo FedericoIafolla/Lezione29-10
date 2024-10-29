@@ -51,9 +51,8 @@ public class AuthorController {
         return authorRepository.findById(id)
                 .map(existingAuthor -> {
                     authorRepository.delete(existingAuthor);
-                    return ResponseEntity.noContent().<Void>build(); // Modifica qui
+                    return ResponseEntity.noContent().<Void>build();
                 })
                 .orElse(ResponseEntity.notFound().build());
     }
-
 }
